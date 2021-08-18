@@ -35,3 +35,11 @@ sudo chmod 777 propy
 sudo cp propy /bin/propy
 ```
 
+
+
+Agora basta utiliza o comando abaixo para compilar os seus arquivos `.pyde`:
+
+```bash
+propy <MEU_PROGRAMA>.pyde
+```
+
