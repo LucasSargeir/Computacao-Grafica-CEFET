@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Diretório de instalação do processing 
+
+java -jar /home/lucas/Processing/processing-py.jar $1
