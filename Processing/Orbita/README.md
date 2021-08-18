@@ -41,5 +41,5 @@ planets = [
 
 Uma miniatura do sistema solar criado pode ser visto abaixo:
 
-<img src="https://github.com/LucasSargeir/Computacao-Grafica-CEFET/blob/main/imagens/Processing/solar_system.gif" />
+<img src="https://github.com/LucasSargeir/Computacao-Grafica-CEFET/blob/main/imagens/solar_system.gif" />
 

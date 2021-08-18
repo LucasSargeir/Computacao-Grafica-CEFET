@@ -19,9 +19,9 @@ A proposta do trabalho foi construir uma curva de Bézier cúbica, baseada na po
 - Se o botão da esquerda for pressionado, o ponto P1 será alterado;
 - Já se o botão da direita for pressionado, o ponto P2 será alterado.
 
-<img src="https://github.com/LucasSargeir/Computacao-Grafica-CEFET/blob/main/imagens/Processing/bezier_01.png" width="35%" height="35%"/>
+<img src="https://github.com/LucasSargeir/Computacao-Grafica-CEFET/blob/main/imagens/bezier_01.png" width="35%" height="35%"/>
 
 Através do indicador no canto superior esquerdo é possível saber qual ponto está sendo alterado. Além disso, se o usuário desejar ver as linhas que geram a curva, basta pressionar o botão do meio do mouse, para ativar ou desativar as linhas. Veja:
 
-<img src="https://github.com/LucasSargeir/Computacao-Grafica-CEFET/blob/main/imagens/Processing/bezier_02.png" width="35%" height="35%"/>
+<img src="https://github.com/LucasSargeir/Computacao-Grafica-CEFET/blob/main/imagens/bezier_02.png" width="35%" height="35%"/>
 
