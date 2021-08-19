@@ -18,13 +18,14 @@ max_height = 10
 min_height = -8
 
 def draw_base():
+	# DESENHA A BASE
 	glBegin(GL_TRIANGLE_FAN)
 
 	glColor3fv(colors['DARK-YELLOW'])
 	glVertex3f(0,0,0)
 
 	vertex = []
-
+	
 	for i in range(total_sides + 1):
 		angle = (i/total_sides) * 2 * math.pi
 		x = radius * math.sin(angle)
@@ -35,13 +36,27 @@ def draw_base():
 	
 	glEnd()
 
+	# DESENHA O CONTORNO
+	glColor3fv(colors['BLACK'])
+
+	last_vertex = vertex[-1]
+
+	for v in vertex:
+		glBegin(GL_LINES)
+		x,y,z = v
+		glVertex3f(x, y, z)	
+		x,y,z = last_vertex
+		glVertex3f(x, y, z)	
+		glEnd()
+		
+		last_vertex = v
+
 	return vertex
 
 def draw_sides(vertex):
 	glBegin(GL_TRIANGLE_FAN)
 	
 	# DESENHA AS LATERAIS
-
 	top = (0,height,0)
 	x,y,z = top
 
@@ -84,7 +99,6 @@ def draw():
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
 	glPushMatrix()
 	
-	glTranslatef(0,-3,0)
 	glRotate(angle,0,1,0)
 
 	vertex = draw_base()
@@ -108,7 +122,7 @@ def config():
 	glEnable(GL_DEPTH_TEST)
 	glClearColor(0.,0.,0.,1.)
 	gluPerspective(45,800.0/600.0,0.1,100.0)
-	glTranslatef(0.0,0.0,-25)
+	glTranslatef(0.0,-2,-25)
 	glutTimerFunc(20,timer,1)
 
 if __name__ == '__main__':
