@@ -4,11 +4,23 @@ from OpenGL.GL import *
 from math import *
 
 density = 50
-rotation_speed = 1
-global_radius = 5
-hole_radius = 2.5
+rotation_speed = 2
+global_radius = 2
+hole_radius = 1
 color = 0.001
 
+def setColor(i, j): 
+    
+    if j < density//2: 
+        r = (j) / (density/2 - 1)
+        g = (j) / (density/2 - 1)
+        b = (j) / (density/2 - 1)
+    else:
+        r = ((density - j) / (density/2 - 1)) - 0.08
+        g = ((density - j) / (density/2 - 1)) - 0.08
+        b = ((density - j) / (density/2 - 1)) - 0.08
+    
+    glColor3f(r, g, b)
 
 def donut(u, v):
     theta = ( u * 2 * pi) / (density - 1)
@@ -20,6 +32,11 @@ def donut(u, v):
     return x, y, z
 
 def draw_donut_points():
+    glTranslatef(4,0,0)
+    glRotatef(angle,0,1,0)
+
+    glColor3f(1, 1, 1)
+
     glBegin(GL_POINTS)
     for i in range(density):
         for j in range(density):
@@ -28,22 +45,18 @@ def draw_donut_points():
 
 angle = 0
 
-def setColor(i, j): 
-    r = (i) / (density - 1)
-    g = (i) / (density - 1)
-    b = (i) / (density - 1)
-    glColor3f(r, g, b)
 
 def draw_filled_donut():
-    
-    glBegin(GL_TRIANGLE_STRIP)
+    glTranslatef(-4,0,0)
+    glRotatef(angle,0,1,0)
 
     for i in range(density):    
+        glBegin(GL_TRIANGLE_STRIP)
         for j in range(density):
+            setColor(i,j)
             glVertex3fv(donut(i,j))
             glVertex3fv(donut(i - 1,j))
-            setColor(i,j)
-    glEnd()
+        glEnd()
 
 angle = 0
 
@@ -51,12 +64,15 @@ def draw():
     global angle
     
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
-    glPushMatrix()
     
-    glRotatef(angle,0,1,0)
+    glPushMatrix()    
     draw_filled_donut()    
-    
     glPopMatrix()
+
+    glPushMatrix()    
+    draw_donut_points()    
+    glPopMatrix()
+    
     glutSwapBuffers()
     
     angle += rotation_speed
@@ -75,7 +91,7 @@ glEnable(GL_MULTISAMPLE)
 glEnable(GL_DEPTH_TEST)
 glClearColor(0.,0.,0.,1.)
 gluPerspective(45,800.0/600.0,0.1,100.0)
-glTranslatef(0.0,0.0,-20)
+glTranslatef(0.0,0.0,-15)
 glutTimerFunc(50,timer,1)
 glutMainLoop()
 

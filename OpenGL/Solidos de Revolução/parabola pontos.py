@@ -7,11 +7,17 @@ density = 15
 rotation_speed = 2
 
 def setColor(i, j): 
-    r = ((i + j)/2) / (density - 1)
-    g = ((i + j)/2) / (density - 1)
-    b = ((i + j)/2) / (density - 1)
+    
+    if j < density//2: 
+        r = (j) / (density/2 - 1)
+        g = (j) / (density/2 - 1)
+        b = (j) / (density/2 - 1)
+    else:
+        r = ((density - j) / (density/2 - 1)) - 0.08
+        g = ((density - j) / (density/2 - 1)) - 0.08
+        b = ((density - j) / (density/2 - 1)) - 0.08
+    
     glColor3f(r, g, b)
-
 
 def second_degree_function(u, v):
     theta = (v * 2 * pi) / (density - 1)
@@ -34,19 +40,22 @@ def third_degree_function(u, v):
     return x, y, z
 
 def draw_second_degree_function_points():
-    glTranslatef(-5,0,0)
+    glTranslatef(-6,-1,0)
     glRotatef(angle,0,1,0)
+    glColor3f(1, 1, 1)
 
     glBegin(GL_POINTS)
     for i in range(density):
         for j in range(density):
-            glVertex3fv(second_degree_function(i,j))
+            x, y, z = second_degree_function(i,j)
+            glVertex3f(x, -y, z)
     glEnd()
 
 def draw_third_degree_function_points():
-    glTranslatef(5,0,0)
+    glTranslatef(6,0,0)
     glRotatef(angle,0,1,0)
-    
+    glColor3f(1, 1, 1)
+
     glBegin(GL_POINTS)
     for i in range(density):
         for j in range(density):
@@ -54,27 +63,27 @@ def draw_third_degree_function_points():
     glEnd()
 
 def draw_filled_second_degree_function():
-    glTranslatef(-5,0,0)
-    glRotatef(angle,0,1,0)
-
-    glBegin(GL_TRIANGLE_STRIP)
-    for i in range(density):
-        for j in range(density):
-            glVertex3fv(second_degree_function(i,j))
-            glVertex3fv(second_degree_function(i - 1,j))
-            setColor(i, j)
-    glEnd()
-
-def draw_filled_third_degree_function():
-    glTranslatef(5,0,0)
+    glTranslatef(-6,1,0)
     glRotatef(angle,0,1,0)
 
     for i in range(density):
         glBegin(GL_TRIANGLE_STRIP)
         for j in range(density):
+            setColor(i, j)
+            glVertex3fv(second_degree_function(i,j))
+            glVertex3fv(second_degree_function(i - 1,j))
+        glEnd()
+
+def draw_filled_third_degree_function():
+    glTranslatef(0,0,0)
+    glRotatef(angle,0,1,0)
+
+    for i in range(1,density):
+        glBegin(GL_TRIANGLE_STRIP)
+        for j in range(density):
+            setColor(i, j)
             glVertex3fv(third_degree_function(i,j))
             glVertex3fv(third_degree_function(i - 1,j))
-            setColor(i, j)
         glEnd()
 
 angle = 0
@@ -90,6 +99,14 @@ def draw():
    
     glPushMatrix()
     draw_filled_third_degree_function()    
+    glPopMatrix()
+    
+    glPushMatrix()
+    draw_third_degree_function_points()    
+    glPopMatrix()
+    
+    glPushMatrix()
+    draw_second_degree_function_points()    
     glPopMatrix()
     
     glutSwapBuffers()
