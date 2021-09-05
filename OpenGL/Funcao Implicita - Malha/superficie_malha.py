@@ -14,11 +14,9 @@ dx = (xn - x0)/n
 dy = (yn - y0)/n
 
 def f2(x,y):
-    # Paraboloide Circular
     return x**2+y**2
 
 def f(x,y):
-    # Paraboloide Circular
     return x**2-y**2
 
 def cor(t, c1 = np.array([1,.69,0]), c2 = np.array([.29,.20,0])):
