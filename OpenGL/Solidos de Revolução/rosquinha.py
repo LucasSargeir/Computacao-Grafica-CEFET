@@ -11,14 +11,14 @@ color = 0.001
 
 def setColor(i, j): 
     
-    if j < density//2: 
-        r = (j) / (density/2 - 1)
-        g = (j) / (density/2 - 1)
-        b = (j) / (density/2 - 1)
+    if i < density//2: 
+        r = (i) / (density/2 - 1)
+        g = (i) / (density/2 - 1)
+        b = (i) / (density/2 - 1)
     else:
-        r = ((density - j) / (density/2 - 1)) - 0.08
-        g = ((density - j) / (density/2 - 1)) - 0.08
-        b = ((density - j) / (density/2 - 1)) - 0.08
+        r = ((density - i) / (density/2 - 1)) - 0.08
+        g = ((density - i) / (density/2 - 1)) - 0.08
+        b = ((density - i) / (density/2 - 1)) - 0.08
     
     glColor3f(r, g, b)
 
