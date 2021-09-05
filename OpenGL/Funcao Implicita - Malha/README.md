@@ -13,7 +13,7 @@
 
 Esse trabalho tem como objetivo implementar uma malha (superficie) para uma função implicita qualquer pelo OpenGL. Para a implementação foi escolhido o GLUT. 
 
-As funções implicitas escolhidas foram`x² + y²` e `x² - y²`.
+As funções implicitas escolhidas foram `x² + y²` e `x² - y²`.
 
 
 
