@@ -19,3 +19,13 @@ Esse repositório foi criado com o objetivo de guardar os trabalhos e estudos fe
 
 - [Pirâmide](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Piramide)
 
+- [Funções Implicitas](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Funcao%20Implicita%20-%20Malha)
+- [Sólidos de Revolução](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Solidos%20de%20Revolu%C3%A7%C3%A3o)
+
+
+
+### Extras
+
+- [Processing CLI](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/Processing/ProcessingPy%20CLI)
+
+  Utilize o VS Code ou qualquer outro editor para executar os programas do Processing.
