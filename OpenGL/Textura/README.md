@@ -28,8 +28,6 @@ A textura utilizada foi a mostrada abaixo:
 <br/>
 
 
-### 
-
 ### Resultados
 
 Abaixo podemos ver como ficou o resultado do programa:

@@ -95,7 +95,7 @@ class Sphere:
 
 		x2 = x + ((sphere.radius + distance) * cos(angle))
 		y2 = y + ((sphere.radius + distance) * sin(angle))
-		z2 = z + ((sphere.radius) ** 2)
+		z2 = z 
 
 		return x2, y2, z2
 
