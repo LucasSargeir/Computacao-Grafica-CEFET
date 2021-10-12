@@ -23,7 +23,7 @@ Para ver melhor o dado criado, algumas interações foram inseridas, são elas:
 
 A textura utilizada foi a mostrada abaixo:
 
-<img src="https://github.com/LucasSargeir/Computacao-Grafica-CEFET/blob/main/OpenGL/dado.png" width="35%" height="35%"/>
+<img src="./dado.png" width="35%" height="35%"/>
 
 
 
