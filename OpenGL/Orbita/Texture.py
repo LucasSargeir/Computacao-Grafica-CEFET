@@ -46,6 +46,7 @@ class Texture:
 
     def __InitGL(self, Width, Height):             
         self.__LoadTextures()
+        glPointSize(2.0)
         glEnable(GL_TEXTURE_2D)
         glClearColor(0.0, 0.0, 0.0, 0.0) 
         glClearDepth(1.0)
