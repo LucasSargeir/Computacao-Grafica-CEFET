@@ -82,8 +82,8 @@ class Sphere:
 		for i in range(0, self.density):
 			glBegin(GL_TRIANGLE_STRIP)
 			for j in range(0, self.density):
-				glTexCoord2f((49 - j)/(self.density - 1), (49 - i)/(self.density - 1)); glVertex3fv(self._sphere(i,j))
-				glTexCoord2f((49 - j)/(self.density - 1), (49 - i)/(self.density - 1)); glVertex3fv(self._sphere(i - 1,j))
+				glTexCoord2f((self.density - 1 - j)/(self.density - 1), (self.density - 1 - i)/(self.density - 1)); glVertex3fv(self._sphere(i,j))
+				glTexCoord2f((self.density - 1 - j)/(self.density - 1), (self.density - 1 - i)/(self.density - 1)); glVertex3fv(self._sphere(i - 1,j))
 			glEnd()
 
 		glPopMatrix()	
