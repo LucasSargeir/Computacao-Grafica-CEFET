@@ -32,7 +32,7 @@ A textura utilizada foi a mostrada abaixo:
 
 Abaixo podemos ver como ficou o resultado do programa:
 
-<img src="../../imagens/dice.gif" width="50%" height="50%"/>
+<img src="../../../imagens/dice.gif" width="50%" height="50%"/>
 
 
 
