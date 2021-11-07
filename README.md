@@ -23,7 +23,7 @@ Esse repositório foi criado com o objetivo de guardar os trabalhos e estudos fe
 - [Textura](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Textura)
 - [Sistema Solar (com e sem textura)](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Orbita)
 - [Iluminação](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Iluminacao)
-- [Objetos PLY](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Objetos PLY)
+- [Objetos PLY](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Objetos%20%PLY)
 
 
 
