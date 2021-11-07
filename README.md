@@ -18,14 +18,12 @@ Esse repositório foi criado com o objetivo de guardar os trabalhos e estudos fe
 ### Trabalhos OpenGL
 
 - [Pirâmide](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Piramide)
-
 - [Funções Implicitas](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Funcao%20Implicita%20-%20Malha)
-
 - [Sólidos de Revolução](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Solidos%20de%20Revolu%C3%A7%C3%A3o)
-
 - [Textura](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Textura)
-
 - [Sistema Solar (com e sem textura)](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Orbita)
+- [Iluminação](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Iluminacao)
+- [Objetos PLY](https://github.com/LucasSargeir/Computacao-Grafica-CEFET/tree/main/OpenGL/Objetos PLY)
 
 
 
