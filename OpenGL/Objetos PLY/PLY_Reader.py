@@ -96,9 +96,6 @@ class PLYReader:
         else:
             raise Exception('O arquivo deve seguir o formato ply')
 
-    def draw(self):
-        glCallList(self._gl_list)
-
 
 converter_helpper = {
     'float': lambda x: float(x),
